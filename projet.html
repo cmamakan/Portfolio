@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function autoRefresh() {
+            window.location = window.location.href;
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamakan</title>
+    <link rel="stylesheet" href="CSS/projet.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!----hero Section start---->
+    <div class="hero">
+        <div class="navigation">
+            <nav>
+                <h2 class="logo">My<span>Projects</span></h2>
+                <ul>
+                    <li><a href="./homepage.html">Home</a></li>
+                    <li><a href="./experience.html">Experience</a></li>
+                    <li><a href="./education.html">Education</a></li>
+                    <li><a href="./certification.html">Certifications</a></li>
+                    <li><a href="./projet.html"><span>Projects</span></a></li>
+                    <li><a href="./hobbies.html">Hobbies</a></li>
+                </ul>
+            </nav>
+            <br>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="projectbox">
+                <h1 class="project_title"></h1>
+                <div class="image-gallery">
+                    <div class="image-container" onclick="window.location.href='https://www.kaggle.com/code/mamakan/bellabeat-with-r'">
+                        <div class="title">Bellabeat</div>
+                        <img src="IMAGES/bellabeat3.png" alt="Image description 1">
+                        <div class="overlay">
+                            <div class="text">This project aims to detect trends and patterns in smart device usage among many users. Using R and SQL, data is compared and visualized to identify insights. <br> <br> Recommendations aim to improve Bellabeat's marketing strategy by aligning applications with user preferences revealed through Fitbit data.</div>
+                        </div>
+                    </div>
+                    <div class="image-container" onclick="window.location.href='https://github.com/cmamakan/Phishing_Project'">
+                        <div class="title">Phishing</div>
+                        <img src="IMAGES/phishing2.png" alt="Image description 2">
+                        <div class="overlay">
+                            <div class="text">
+                                This project aims to raise awareness about phishing by analyzing phishing trends. Using Python, a website listing phishing URLs was scraped with the help of BeautifulSoup and Requests. Various data were extracted from an XML file and converted into a CSV format. <br><br>This CSV was then loaded into Power BI to identify the most affected sectors and emerging trends. The goal is to educate users about phishing risks and promote better online security. </div>
+                        </div>
+                    </div>
+                    <div class="image-container" onclick="window.location.href='https://github.com/cmamakan/Sentiment_Analysis'">
+                        <div class="title">Sentiment Analysis</div>
+                        <img src="IMAGES/sentiment1.png" alt="Image description 3">
+                        <div class="overlay">
+                            <div class="text">
+                                This project used natural language processing techniques to examine tweets about the highly debated pension reform in France, which led to significant public discussion and strikes. <br><br> Data was scraped from X and stored in MongoDB, with analysis performed using TextBlob, NLTK, and SpaCy, and processed with PySpark. A dashboard was then created using Flask to visualize the sentiment data and provide insights into public opinion.</div>
+                        </div>
+                    </div>
+                    <div class="image-container" onclick="window.location.href='https://github.com/cmamakan/School-Sucess'">
+                        <div class="title">School sucess</div>
+                        <img src="IMAGES/student.png" alt="Image description 4">
+                        <div class="overlay">
+                            <div class="text">This project analyzed student performance data to identify key factors influencing academic success. Data mining and visualization were performed using Python, including statistical analysis and decision tree modeling. <br><br> The goal was to uncover insights to improve student performance and academic strategies.</div>
+                        </div>
+                    </div>
+                    <div class="image-container" onclick="window.location.href='https://colab.research.google.com/drive/13b6S3_y9DkG_UqIzg5Q8jdQ55VH-OnQ4?usp=sharing'">
+                        <div class="title">Daily News</div>
+                        <img src="IMAGES/newspaper.png" alt="Image description 5">
+                        <div class="overlay">
+                            <div class="text">The goal of this project was to provide a daily news summary from the front pages of three prominent French newspapers. This involved scraping headlines, summaries, and content from multiple articles into a dataframe. <br><br> Langchain was utilized to provide an API for requesting daily news summaries, with this integration serving as an experiment to explore API technologies.</div>
+                        </div>
+                    </div>
+                    <div class="image-container" onclick="window.location.href='https://github.com/cmamakan/Salary_Prediction'">
+                        <div class="title">Salary prediction </div>
+                        <img src="IMAGES/customer.png" alt="Image description 6">
+                        <div class="overlay">
+                            <div class="text">This project aims to predict salaries for various data-related jobs based on different characteristics. The process involved scraping a file from a website to gather relevant salary data, followed by analyzing the data using Power BI. <br> <br> Gradient Boosting was used to develop a predictive model. An API was created and tested using Postman, and then integrated into a Flask-based graphical interface, allowing users to select job characteristics and obtain salary predictions.</div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

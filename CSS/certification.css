@@ -1,0 +1,143 @@
+/* ################# HOBBIES ############*/
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	box-sizing: border-box;
+	color: rgb(7, 7, 7);
+}
+
+/* ajout d'un arrière plan */
+.hero{
+	height: 100vh;
+	width: 100%;
+	background-image: url(../IMAGES/home_walpaper.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+/* texte en blanc et le span en rouge */
+.logo{
+	color: white;
+	font-size: 35px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+span{ 
+	color: #f9004d; /* tout les textes dans des span deviennent rouge */
+}
+
+/* ################# NAVIGATEUR ############*/
+/* on aligne les éléments du navigateur ensemble et on les espace */
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 45px;
+	padding-left: 8%;
+	padding-right: 8%;
+}
+/* on modifie à nouveau les éléménts du navigateur */
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px  25px;
+}
+nav ul li a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+nav ul li a:hover{
+	color: #f9004d;
+	transition: .4s;
+}
+
+/* ################# HOBBIES ############*/
+.projectbox{
+position: relative; /* This makes z-index work correctly */
+height: 100vh;
+width: 100%;
+background-color: rgb(7, 7, 7);
+}
+.project_title {
+color: #ffffff;
+position: absolute;
+padding-top: 50px;
+padding-left: 550px;
+z-index: 10; /* Ensure it's higher than the z-index (or default stack order) of other elements */
+}
+
+body {
+background-color: rgb(7, 7, 7); /* Ensures the entire body has the background color */
+color: #ffffff; /* Assuming you want white text for contrast */
+height: 100vh; /* Adjust if your content is longer than the viewport */
+margin: 0;
+padding: 0;
+display: flex;
+flex-direction: column; /* Stacks content vertically */
+}
+
+.image-gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+padding: 20px 0;
+flex-grow: 1; /* Takes up all available space */
+}
+
+.image-gallery img {
+width: 30%; /* Adjust the width to control spacing */
+margin-bottom: 20px; /* Adds space below each image */
+}
+
+.image-container {
+position: relative;
+width: 30%; /* Adjust width as needed */
+margin-bottom: 20px;
+cursor: pointer;
+}
+
+.image-container img {
+width: 100%;
+display: block;
+}
+
+.image-container .title {
+position: absolute;
+top: 10px;
+left: 10px;
+color: white;
+font-size: 18px;
+font-weight: bold;
+background-color: rgba(0, 0, 0, 0.5);
+padding: 5px 10px;
+}
+
+.overlay {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+height: 100%;
+width: 100%;
+opacity: 0;
+transition: .5s ease;
+background-color: rgba(0, 0, 0, 0.8);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.image-container:hover .overlay {
+opacity: 1;
+}
+
+.text {
+color: white;
+font-size: 16px;
+padding: 20px;
+text-align: center
+}

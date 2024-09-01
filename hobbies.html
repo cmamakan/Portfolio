@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script>
+		function autoRefresh() {
+				window.location = window.location.href; }
+	</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mamakan</title>
+  <link rel="stylesheet" href="CSS/hobbies.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+<body>
+	<!----hero Section start---->
+
+	<div class="hero">
+		<div class="navigation">
+		<nav>
+			<h2 class="logo">My<span>Hobbies</span></h2>
+			<ul>
+				<li><a href="./homepage.html">Home</a></li>
+				<li><a href="./experience.html">Experience</a></li>
+				<li><a href="./education.html">Education</a></li>
+				<li><a href="./certification.html">Certifications</a></li>
+				<li><a href="./projet.html">Projects</a></li>
+				<li><a href="./hobbies.html"><span>Hobbies</span></a></li>
+			</ul>
+		</nav>
+		<br>
+		</div>
+
+<div class="tripbox">
+		<h1 class="trips_title">Explore The Word</h1>
+
+
+ <!----Sliders Section start---->
+
+<section class="img-slider">
+
+	<div class="slide active">
+		<img src="IMAGES/paris.png" alt="">
+		<div class="info">
+				<h2>France</h2>
+		</div>
+	</div>
+
+	<div class="slide">
+		<img src="IMAGES/suisse.png" alt="">
+		<div class="info">
+			<h2>Switzerland</h2>
+		</div>
+	</div>
+
+		<div class="slide">
+			<img src="IMAGES/london.png" alt="">
+			<div class="info">
+				<h2>United Kingdom</h2>
+			</div>
+		</div>
+
+		<div class="slide">
+			<img src="IMAGES/united.png" alt="">
+			<div class="info">
+				<h2>United States </h2>
+			</div>
+		</div>
+
+		<div class="slide">
+			<img src="IMAGES/monaco.png" alt="">
+			<div class="info">
+				<h2>Monaco</h2>
+			</div>
+		</div>
+
+		<div class="slide">
+			<img src="IMAGES/abidjan.png" alt="">
+			<div class="info">
+				<h2>Ivoiry Coast</h2>
+			</div>
+		</div>
+
+		<div class="slide">
+			<img src="IMAGES/coree.png" alt="">
+			<div class="info">
+				<h2>South Korea</h2>
+			</div>
+		</div>
+
+		<div class="slide">
+			<img src="IMAGES/japon.png" alt="">
+			<div class="info">
+				<h2>Japan</h2>
+			</div>
+		</div>
+
+		<div class="slide">
+			<img src="IMAGES/maroc.png" alt="">
+			<div class="info">
+				<h2>Morocco</h2>
+			</div>
+		</div>
+
+		<div class="slide">
+			<img src="IMAGES/mali.png" alt="">
+			<div class="info">
+				<h2>Mali</h2>
+			</div>
+		</div>
+
+		<div class="navigation">
+			<div class="btn active"></div>
+			<div class="btn"></div>
+			<div class="btn"></div>
+			<div class="btn"></div>
+			<div class="btn"></div>
+			<div class="btn"></div>
+			<div class="btn"></div>
+			<div class="btn"></div>
+			<div class="btn"></div>
+			<div class="btn"></div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+	var slides = document.querySelectorAll('.slide');
+var btns = document.querySelectorAll('.btn');
+let currentSlide = 0; // Start from the first slide
+
+// Function for manual navigation
+var manualNav = function(manual) {
+    slides.forEach((slide) => {
+        slide.classList.remove('active');
+    });
+
+    btns.forEach((btn) => {
+        btn.classList.remove('active');
+    });
+
+    slides[manual].classList.add('active');
+    btns[manual].classList.add('active');
+}
+
+// Event listeners for buttons
+btns.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i; // Update the current slide index
+    });
+});
+
+// Function for autoplay navigation
+var repeat = function() {
+    let active = document.getElementsByClassName('active');
+
+    var repeater = () => {
+        setTimeout(function() {
+            // Remove 'active' class from current elements
+            [...active].forEach((activeSlide) => {
+                activeSlide.classList.remove('active');
+            });
+
+            // Update slide index
+            currentSlide = (currentSlide + 1) % slides.length; // Move to next slide, and loop back to the start
+
+            // Add 'active' class to new elements
+            slides[currentSlide].classList.add('active');
+            btns[currentSlide].classList.add('active');
+
+            // Repeat the process
+            repeater();
+        }, 10000); // Slide change interval
+    }
+
+    repeater();
+}
+
+// Start the automatic slide show
+repeat();
+	</script>
+
+ </section>
+ </div>
+</div>
+
+ <!----Training section start---->
+
+ <section class ="training_section">
+  	<h1 class="training_title">Muay Thai & Gym</h1>
+		 <img src="IMAGES/boxe.png"  class="boxe">
+ </section>
+
+ <section class ="training_section">
+	<h1 class="cook_title">Culinary Arts</h1>
+	 <img src="IMAGES/food2.png"  class="food">
+</section>
+ 
+</body>
+</html>
