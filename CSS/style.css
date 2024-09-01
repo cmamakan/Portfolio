@@ -189,3 +189,110 @@ color :rgb(255, 255, 255);
 .contact-info img:hover {
 	transform: scale(1.1);
 }
+
+/* Media Queries pour les petits écrans (téléphones) */
+@media (max-width: 768px) {
+	/* Ajuster la taille des polices */
+	h1 {
+			font-size: 50px;
+	}
+	
+	h3 {
+			font-size: 20px;
+	}
+
+	h4 {
+			font-size: 18px;
+	}
+
+	/* Adapter les marges et les paddings */
+	.content {
+			top: 40%;
+			left: 5%;
+			transform: translateY(-50%);
+	}
+
+	/* Disposition des éléments */
+	nav {
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 20px;
+			padding-left: 5%;
+			padding-right: 5%;
+	}
+
+	nav ul {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			margin-top: 10px;
+	}
+
+	nav ul li {
+			padding: 10px 0;
+			text-align: center;
+	}
+
+	.main {
+			flex-direction: column;
+			text-align: center;
+	}
+
+	.about img {
+			width: 100%;
+			margin-bottom: 20px;
+	}
+
+	.about-text {
+			width: 100%;
+	}
+
+	.newslatter form {
+			width: 100%;
+			padding: 0;
+	}
+
+	.newslatter form input:first-child {
+			padding: 10px 80px 10px 10px;
+	}
+
+	.btn, button {
+			padding: 10px 20px;
+	}
+
+	.contact-info {
+			text-align: center;
+			margin-top: 30px;
+	}
+}
+
+/* Media Queries pour les très petits écrans (petits téléphones) */
+@media (max-width: 480px) {
+	/* Réduire encore la taille des polices */
+	h1 {
+			font-size: 40px;
+	}
+	
+	h3 {
+			font-size: 18px;
+	}
+
+	h4 {
+			font-size: 16px;
+	}
+
+	/* Simplifier la disposition encore plus */
+	nav {
+			padding-top: 10px;
+			padding-left: 3%;
+			padding-right: 3%;
+	}
+
+	.about-text p {
+			font-size: 16px;
+	}
+
+	.newslatter form input:first-child {
+			padding: 10px 60px 10px 10px;
+	}
+}
