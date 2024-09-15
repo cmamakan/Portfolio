@@ -1,0 +1,475 @@
+HTML DE EXPERIENCE 
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamakan</title>
+    <link rel="stylesheet" href="CSS/experience.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Superposition Floue -->
+    <div id="blurOverlay" class="blur-overlay"></div>
+
+    <!----hero Section start---->
+    <div class="hero">
+        <div class="navigation">
+            <nav>
+                <h2 class="logo">My<span>Experience</span></h2>
+                <ul>
+                    <li><a href="./homepage.html">Home</a></li>
+                    <li><a href="./experience.html"><span>Experience</span></a></li>
+                    <li><a href="./education.html">Education</a></li>
+                    <li><a href="./certification.html">Certifications</a></li>
+                    <li><a href="./projet.html">Projects</a></li>
+                    <li><a href="./hobbies.html">Hobbies</a></li>
+                </ul>
+                <!-- Menu hamburger pour les petits écrans -->
+                <div class="burger-menu" onclick="openNav()">
+                    <img src="/IMAGES/burger.png" alt="Menu">
+                </div>
+            </nav>
+
+            <!-- Sidebar Menu pour les mobiles -->
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="./homepage.html">Home</a>
+                <a href="./experience.html"><span>Experience</span></a>
+                <a href="./education.html">Education</a>
+                <a href="./certification.html">Certifications</a>
+                <a href="./projet.html">Projects</a>
+                <a href="./hobbies.html">Hobbies</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="tripbox">
+        <div class="experience-section">
+            <div class="experience-container">
+                <img src="/IMAGES/sg.png" alt="Company Logo" class="company-logo">
+                <div class="experience-details">
+                    <h2 class="company-name">BUSINESS ANALYST</h2>
+                    <h3 class="job-title">SG (Societe Generale) </h3>
+                    <h3 class="location">France, Ile-de-France </h3>
+                    <p class="year">2022-2024</p> <br><br>
+                    <p class="experience-description">
+                        In my role as a Business Analyst at Bank SG's Assistance Unit, I was part of the team responsible for overseeing the activity piloting of customer and employee support, enhancing operational efficiency using tools like ticketing systems and web callback technology.
+                        Within this dynamic environment, I ensured the smooth operation of assistance operations, collaborating closely with colleagues across departments.
+                        <br><br>
+                        My role involved meticulous data handling with Power BI to ensure high-quality reporting and actionable insights for strategic decision-making.
+                        I served as the liaison between business managers and technical teams, translating business needs into technical specifications and ensuring effective solution implementation. My reporting was tailored to the audience—providing strategic KPIs to managers and broader metrics to directors and external stakeholders to align with their respective goals.
+                        This iterative approach, coupled with the integration of data lake technology, underscored our commitment to innovation and excellence in service delivery.
+                        <br><br>
+                        My focus on continuous improvement drove me to regularly analyze feedback and performance metrics, leading to significant enhancements in process efficiency, workflow optimization, and overall satisfaction for both customers and employees.
+                    </p>
+                    <!-- Section des logos de technologie -->
+                    <div class="technology-logos">
+                        <img src="/IMAGES/tech_logos.png" alt="Technology Logos" class="tech-logos">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript pour gérer le menu de la sidebar -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "100%"; // La sidebar prend toute la largeur de l'écran
+            document.getElementById("blurOverlay").classList.add("active");
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("blurOverlay").classList.remove("active");
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+CSS DE EXPERIENCE 
+
+
+
+
+/* Réinitialisation des marges et des espacements */
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	box-sizing: border-box;
+	color: rgb(0, 0, 0);
+}
+/* ajout d'un arrière plan*/
+.hero{
+	height: 100vh;
+	width: 100%;
+	background-image:  url(../IMAGES/home_walpaper.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+/* Superposition floue */
+.blur-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	filter: blur(5px);
+	transition: opacity 0.3s;
+	opacity: 0;
+	pointer-events: none;
+	z-index: 1; /* Assurez-vous que c'est derrière la sidebar */
+}
+
+.blur-overlay.active {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+/* Texte en blanc et le span en rouge */
+.logo {
+	color: white;
+	font-size: 35px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+
+span {
+	color: #f9004d; /* Tous les textes dans des span deviennent rouges */
+}
+
+/* ################# NAVIGATEUR ############*/
+/* On aligne les éléments du navigateur ensemble et on les espace */
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 45px;
+	padding-left: 8%;
+	padding-right: 8%;
+}
+
+/* On modifie à nouveau les éléments du navigateur */
+nav ul li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px 25px;
+}
+
+nav ul li a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+nav ul li a:hover {
+	color: #f9004d;
+	transition: .4s;
+}
+
+.btn {
+	background-color: #f9004d;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 25px;
+	border-radius: 30px;
+	transition: transform .4s;
+}
+
+.btn:hover {
+	transform: scale(1.2);
+}
+
+.content {
+	position: absolute;
+	top: 50%;
+	left: 8%;
+	transform: translateY(-50%);
+}
+
+h1 {
+	color: white;
+	margin: 20px 0px 20px;
+	font-size: 75px;
+}
+
+h3 {
+	color: white;
+	font-size: 25px;
+	margin-bottom: 50px;
+}
+
+h4 {
+	color: rgba(228, 228, 228, 0.8);
+	letter-spacing: 2px;
+	font-size: 20px;
+}
+
+.newslatter form {
+	width: 380px;
+	max-width: 100%;
+	position: relative;
+}
+
+.newslatter form input:first-child {
+	display: inline-block;
+	width: 100%;
+	padding: 14px 130px 14px 15px;
+	border: 2px solid #f9004d;
+	outline: none;
+	border-radius: 30px;
+}
+
+.newslatter form input:last-child {
+	position: absolute;
+	display: inline-block;
+	outline: none;
+	border: none;
+	padding: 10px 30px;
+	border-radius: 30px;
+	background-color: #f9004d;
+	color: white;
+	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+	top: 6px;
+	right: 6px;
+}
+
+.about {
+	width: 100%;
+	padding: 100px 0px;
+	background-color: #191919;
+}
+
+.about img {
+	height: auto;
+	width: 430px;
+}
+
+.about-text {
+	width: 550px;
+}
+
+.main {
+	width: 1130px;
+	max-width: 95%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.about-text h2 {
+	color: white;
+	font-size: 75px;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+}
+
+.about-text h5 {
+	color: white;
+	letter-spacing: 2px;
+	font-size: 22px;
+	margin-bottom: 25px;
+	text-transform: capitalize;
+}
+
+.about-text p {
+	color: rgba(228, 228, 228, 0.8);
+	letter-spacing: 1px;
+	line-height: 28px;
+	font-size: 18px;
+	margin-bottom: 45px;
+}
+
+button {
+	background-color: #f9004d;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 13px 30px;
+	border-radius: 30px;
+	transition: .4s;
+}
+
+button:hover {
+	background-color: transparent;
+	border: 2px solid #f9004d;
+	cursor: pointer;
+}
+
+/* Expérience Section */
+.experience-section {
+	background-color: rgb(7, 7, 7); /* Fond sombre pour toute la section */
+	padding: 50px 0;
+	display: flex;
+	justify-content: center;
+}
+
+.experience-container {
+	max-width: 1200px;
+	background-color: #191919; /* Fond sombre pour le conteneur (ajustez si nécessaire) */
+	color: white; /* Texte blanc pour le contenu dans le conteneur */
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.company-logo {
+	width: 150px;
+	height: 150px;
+	margin-right: 30px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.experience-details h2, .experience-details h3, .experience-details p {
+	color: white; /* Assurer que tout le texte à l'intérieur des détails est blanc */
+}
+
+.experience-details h2 {
+	font-size: 28px;
+	margin-bottom: 10px;
+	color: #f9004d;
+}
+
+.experience-details h3 {
+	font-size: 22px;
+	margin-bottom: 5px;
+	font-weight: 500;
+}
+
+.experience-details p {
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+.location {
+	font-style: italic;
+	color: #f9004d; /* Garder la couleur de surbrillance de la localisation */
+}
+
+.technology-logos {
+	text-align: center; /* Centre les images des logos */
+	padding: 20px 0; /* Ajoute du padding au-dessus et en-dessous des logos pour l'espacement */
+}
+
+.tech-logos {
+	width: 100%; /* Assure que l'image est responsive et s'adapte bien */
+	max-width: 800px; /* Ajuste la largeur maximale selon les besoins */
+	height: auto; /* Maintient le ratio d'aspect */
+	margin: 0 auto; /* Centre l'image horizontalement */
+}
+
+/* Sidebar Styles */
+.sidebar {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 2; /* Assurez-vous que la sidebar est au-dessus de l'overlay flou */
+	top: 0;
+	right: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.sidebar a {
+	padding: 8px 32px;
+	text-decoration: none;
+	font-size: 16px; /* Réduit la taille du texte dans la sidebar */
+	color: white;
+	display: block;
+	transition: color 0.3s, background-color 0.3s;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.sidebar a:hover {
+	color: #f9004d;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Style pour le bouton de fermeture */
+.sidebar .closebtn {
+	position: absolute;
+	top: 20px; /* Distance du haut */
+	right: 20px; /* Distance du bord droit */
+	font-size: 36px; /* Taille du texte du bouton */
+	color: white;
+	cursor: pointer; /* Ajoute un curseur pour le bouton */
+}
+
+/* Affiche la sidebar uniquement lorsqu'elle est active */
+.sidebar.active {
+	width: 250px; /* Largeur de la sidebar lorsqu'elle est ouverte */
+}
+
+/* Affiche le menu hamburger uniquement sur les petits écrans */
+.burger-menu {
+	display: none;
+}
+
+/* Media Queries pour les petits écrans */
+@media screen and (max-width: 768px) {
+	.hero {
+			background-size: cover; /* Assure que l'image de fond s'ajuste bien */
+	}
+
+	.burger-menu {
+		display: block;
+		position: absolute;
+		top: 15px; /* Ajuste selon la position souhaitée */
+		right: 15px; /* Ajuste selon la position souhaitée */
+}
+
+	.sidebar {
+			width: 0; /* Masquer la sidebar par défaut */
+			top: 0;
+			right: 0;
+			background-color: #111;
+	}
+
+	.sidebar.active {
+			width: 250px; /* Largeur de la sidebar lorsqu'elle est ouverte */
+	}
+
+	.burger-menu {
+			display: block;
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			cursor: pointer;
+			z-index: 3; /* Assure que le burger est au-dessus de la sidebar */
+	}
+
+	.burger-menu img {
+			width: 30px; /* Ajustez la taille de l'icône du burger */
+			height: auto;
+	}
+
+	nav ul {
+			display: none; /* Masquer le menu de navigation pour les petits écrans */
+	}
+}
