@@ -269,38 +269,46 @@ button:hover {
 	width: 30px; /* Ajuste la taille de l'icône */
 }
 
-/* Styles de la barre latérale */
+/* Sidebar Styles */
 .sidebar {
 	height: 100%;
-	width: 250px; /* Largeur de la barre latérale */
-	position: fixed; /* Fixe la barre latérale à gauche */
-	z-index: 1;
+	width: 0;
+	position: fixed;
+	z-index: 99; /* Assurez-vous que la sidebar est au-dessus de l'overlay flou */
 	top: 0;
-	left: -250px; /* Cache la barre latérale en dehors de l'écran */
-	background-color: #191919; /* Couleur de fond */
-	overflow-x: hidden; /* Empêche le défilement horizontal */
-	transition: 0.5s; /* Transition lisse */
-	padding-top: 60px; /* Espacement supérieur */
+	right: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 .sidebar a {
-	padding: 10px 15px; /* Espacement autour des liens */
-	text-decoration: none; /* Supprime le soulignement */
-	font-size: 20px; /* Taille de police */
-	color: white; /* Couleur du texte */
-	display: block; /* Affiche les liens en bloc */
-	transition: 0.3s; /* Transition pour les liens */
+	padding: 8px 32px;
+	text-decoration: none;
+	font-size: 16px; /* Réduit la taille du texte dans la sidebar */
+	color: white;
+	display: block;
+	transition: color 0.3s, background-color 0.3s;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 .sidebar a:hover {
-	background-color: #f9004d; /* Couleur au survol */
+	color: #f9004d;
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* Styles pour le bouton de fermeture */
-.closebtn {
-	font-size: 36px;
-	margin-left: 15px; /* Espacement à gauche */
+/* Style pour le bouton de fermeture */
+.sidebar .closebtn {
+	position: absolute;
+	top: 20px; /* Distance du haut */
+	right: 20px; /* Distance du bord droit */
+	font-size: 36px; /* Taille du texte du bouton */
+	color: white;
+	cursor: pointer; /* Ajoute un curseur pour le bouton */
 }
+
 
 /* Media Queries pour les petits écrans (téléphones) */
 @media (max-width: 768px) {

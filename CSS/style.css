@@ -291,21 +291,15 @@ button:hover {
 /* Media Queries pour les petits écrans (téléphones) */
 @media (max-width: 768px) {
 	h1 {
-			font-size: 35px;
-			margin-top: 30px;
-			margin-bottom: 50px;
+			font-size: 30px;
 	}
 
 	h3 {
-			font-size: 20px;
-			margin-bottom: 20px;
-			line-height: 1.5;
-			padding: 0 12px;
+			font-size: 12px;
 	}
 
 	h4 {
-			font-size: 20px;
-			margin-top: 200px;
+			font-size: 15px;
 	}
 
 	.content br {
@@ -322,15 +316,13 @@ button:hover {
 
 	/* Ajouter du padding ou de la marge pour le texte de la présentation */
 	.presentation {
-	   	font-size: 20px; 
-			 line-height: 1.5;
-			 margin-bottom: 80px;
 			padding: 0 10px; /* Ajoutez un peu de padding horizontal */
 	}
 
 	/* Ajout de padding pour le texte de contact */
 	.contact-info {
 			text-align: center;
+			margin-top: 30px;
 			padding: 0 10px; /* Ajoutez un peu de padding horizontal */
 	}
 

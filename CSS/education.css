@@ -5,6 +5,27 @@
 	box-sizing: border-box;
 	color: rgb(0, 0, 0);
 }
+
+/* Superposition floue */
+.blur-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	filter: blur(5px);
+	transition: opacity 0.3s;
+	opacity: 0;
+	pointer-events: none;
+	z-index: 98; /* Assurez-vous que c'est derrière la sidebar */
+}
+
+.blur-overlay.active {
+	opacity: 1;
+	pointer-events: auto;
+}
+
 /* ajout d'un arrière plan*/
 .hero{
 	height: 100vh;
@@ -247,39 +268,47 @@ button:hover{
 
 .burger-icon {
 	width: 30px; /* Ajuste la taille de l'icône */
+	cursor: pointer;
 }
 
-/* Sidebar styles */
+/* Sidebar Styles */
 .sidebar {
 	height: 100%;
-	width: 250px; /* Largeur de la sidebar */
-	position: fixed; /* Fixe la sidebar à gauche */
-	z-index: 1;
+	width: 0;
+	position: fixed;
+	z-index: 99; /* Assurez-vous que la sidebar est au-dessus de l'overlay flou */
 	top: 0;
-	left: -250px; /* Cache la sidebar en dehors de l'écran */
-	background-color: #191919; /* Couleur de fond */
-	overflow-x: hidden; /* Empêche le défilement horizontal */
-	transition: 0.5s; /* Transition lisse */
-	padding-top: 60px; /* Espacement supérieur */
+	right: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 .sidebar a {
-	padding: 10px 15px; /* Espacement autour des liens */
-	text-decoration: none; /* Supprime le soulignement */
-	font-size: 20px; /* Taille de police */
-	color: white; /* Couleur du texte */
-	display: block; /* Affiche les liens en bloc */
-	transition: 0.3s; /* Transition pour les liens */
+	padding: 8px 32px;
+	text-decoration: none;
+	font-size: 16px; /* Réduit la taille du texte dans la sidebar */
+	color: white;
+	display: block;
+	transition: color 0.3s, background-color 0.3s;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 .sidebar a:hover {
-	background-color: #f9004d; /* Couleur au survol */
+	color: #f9004d;
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* Styles pour le bouton de fermeture */
-.closebtn {
-	font-size: 36px;
-	margin-left: 15px; /* Espacement à gauche */
+/* Style pour le bouton de fermeture */
+.sidebar .closebtn {
+	position: absolute;
+	top: 20px; /* Distance du haut */
+	right: 20px; /* Distance du bord droit */
+	font-size: 36px; /* Taille du texte du bouton */
+	color: white;
+	cursor: pointer; /* Ajoute un curseur pour le bouton */
 }
 
 /* Media Queries pour les petits écrans (téléphones) */
@@ -321,34 +350,4 @@ button:hover{
 		padding: 10px 0; /* Ajuster le padding pour un espacement suffisant */
 	}
 
-	/* Styles pour la sidebar */
-	.sidebar {
-		height: 100%; /* Hauteur de la sidebar */
-		width: 250px; /* Largeur de la sidebar */
-		position: fixed; /* Positionnement fixe */
-		top: 0; /* Positionner en haut */
-		left: -250px; /* Masquer la sidebar par défaut */
-		background-color: #333; /* Couleur de fond */
-		overflow-x: hidden; /* Masquer le débordement horizontal */
-		transition: 0.5s; /* Transition pour l'animation d'ouverture */
-		padding-top: 60px; /* Espace en haut */
-	}
-
-	.sidebar a {
-		padding: 8px 8px 8px 32px; /* Espacement pour les liens */
-		text-decoration: none; /* Supprimer le soulignement */
-		font-size: 25px; /* Taille de la police */
-		color: white; /* Couleur du texte */
-		display: block; /* Affichage en bloc */
-		transition: 0.3s; /* Transition pour l'effet de survol */
-	}
-
-	.sidebar a:hover {
-		color: #f1f1f1; /* Couleur au survol */
-	}
-
-	.openbtn {
-		font-size: 20px; /* Taille de la police pour le bouton d'ouverture */
-		cursor: pointer; /* Curseur de pointeur */
-	}
 }
