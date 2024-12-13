@@ -125,7 +125,7 @@ body{
   z-index: 2;
   position: absolute;
   display: flex;
-  bottom: 150px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -134,7 +134,7 @@ body{
   background: rgba(255, 255, 255, 0.5);
   width: 12px;
   height: 12px;
-  margin: 10px;
+  margin: 5px;
   border-radius: 50%;
   cursor: pointer;
 }
