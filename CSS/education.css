@@ -234,3 +234,121 @@ button:hover{
     height: auto; /* Maintain aspect ratio */
     margin: 0 auto; /* Center the image horizontally */
 }
+
+/* Styles pour le burger menu */
+.burger {
+	display: none; /* Masqué par défaut, affiché en mobile */
+	cursor: pointer;
+	position: absolute; /* Positionner de manière absolue */
+	top: 15px; /* Distance du haut de la page */
+	right: 15px; /* Distance du bord droit */
+	z-index: 10; /* Assure que le menu burger soit au-dessus des autres éléments */
+}
+
+.burger-icon {
+	width: 30px; /* Ajuste la taille de l'icône */
+}
+
+/* Sidebar styles */
+.sidebar {
+	height: 100%;
+	width: 250px; /* Largeur de la sidebar */
+	position: fixed; /* Fixe la sidebar à gauche */
+	z-index: 1;
+	top: 0;
+	left: -250px; /* Cache la sidebar en dehors de l'écran */
+	background-color: #191919; /* Couleur de fond */
+	overflow-x: hidden; /* Empêche le défilement horizontal */
+	transition: 0.5s; /* Transition lisse */
+	padding-top: 60px; /* Espacement supérieur */
+}
+
+.sidebar a {
+	padding: 10px 15px; /* Espacement autour des liens */
+	text-decoration: none; /* Supprime le soulignement */
+	font-size: 20px; /* Taille de police */
+	color: white; /* Couleur du texte */
+	display: block; /* Affiche les liens en bloc */
+	transition: 0.3s; /* Transition pour les liens */
+}
+
+.sidebar a:hover {
+	background-color: #f9004d; /* Couleur au survol */
+}
+
+/* Styles pour le bouton de fermeture */
+.closebtn {
+	font-size: 36px;
+	margin-left: 15px; /* Espacement à gauche */
+}
+
+/* Media Queries pour les petits écrans (téléphones) */
+@media (max-width: 768px) {
+	nav ul {
+		display: none; /* Masquer les liens de navigation par défaut sur mobile */
+	}
+
+	.burger {
+		display: block; /* Affiche le burger menu sur mobile */
+		margin-top: 30px; /* Ajoutez un peu d'espace au-dessus pour aligner avec h2 */
+	}
+
+	.experience-section {
+		padding: 20px; /* Réduire le padding pour les écrans plus petits */
+	}
+
+	.experience-container {
+		flex-direction: column; /* Aligner le contenu en colonne pour une meilleure lisibilité */
+		padding: 15px; /* Ajuster le padding interne */
+		margin: 10px; /* Ajouter une marge pour espacer les conteneurs */
+	}
+
+	.company-logo {
+		margin: 0 auto 15px; /* Centrer l'image et ajouter une marge en bas */
+	}
+
+	.experience-details {
+		text-align: center; /* Centrer le texte pour une meilleure présentation */
+	}
+
+	h2,
+	h3,
+	p {
+		margin-bottom: 15px; /* Espacement entre les éléments */
+	}
+
+	.technology-logos {
+		padding: 10px 0; /* Ajuster le padding pour un espacement suffisant */
+	}
+
+	/* Styles pour la sidebar */
+	.sidebar {
+		height: 100%; /* Hauteur de la sidebar */
+		width: 250px; /* Largeur de la sidebar */
+		position: fixed; /* Positionnement fixe */
+		top: 0; /* Positionner en haut */
+		left: -250px; /* Masquer la sidebar par défaut */
+		background-color: #333; /* Couleur de fond */
+		overflow-x: hidden; /* Masquer le débordement horizontal */
+		transition: 0.5s; /* Transition pour l'animation d'ouverture */
+		padding-top: 60px; /* Espace en haut */
+	}
+
+	.sidebar a {
+		padding: 8px 8px 8px 32px; /* Espacement pour les liens */
+		text-decoration: none; /* Supprimer le soulignement */
+		font-size: 25px; /* Taille de la police */
+		color: white; /* Couleur du texte */
+		display: block; /* Affichage en bloc */
+		transition: 0.3s; /* Transition pour l'effet de survol */
+	}
+
+	.sidebar a:hover {
+		color: #f1f1f1; /* Couleur au survol */
+	}
+
+	.openbtn {
+		font-size: 20px; /* Taille de la police pour le bouton d'ouverture */
+		cursor: pointer; /* Curseur de pointeur */
+	}
+}

@@ -17,22 +17,34 @@
 
 <body>
 	<!----hero Section start---->
+  <div class="hero">
+    <nav>
+        <h2 class="logo">My<span>Experience</span></h2>
+        <!-- Burger Menu for Mobile -->
+        <div class="burger" onclick="openNav()">
+            <img src="IMAGES/burger.png" alt="Menu" class="burger-icon">
+        </div>
+        <!-- Navigation Links -->
+        <ul>
+            <li><a href="./homepage.html">Home</a></li>
+            <li><a href="./experience.html"><span>Experience</span></a></li>
+            <li><a href="./education.html">Education</a></li>
+            <li><a href="./certification.html">Certifications</a></li>
+            <li><a href="./projet.html">Projects</a></li>
+            <li><a href="./hobbies.html">Hobbies</a></li>
+        </ul>
+    </nav>
 
-	<div class="hero">
-		<div class="navigation">
-		<nav>
-			<h2 class="logo">My<span>Experience</span></h2>
-			<ul>
-				<li><a href="./homepage.html">Home</a></li>
-				<li><a href="./experience.html"><span>Experience</span></a></li>
-				<li><a href="./education.html">Education</a></li>
-				<li><a href="./certification.html">Certifications</a></li>
-				<li><a href="./projet.html">Projects</a></li>
-				<li><a href="./hobbies.html">Hobbies</a></li>
-			</ul>
-		</nav>
-		<br>
-		</div>
+    <!-- Sidebar Menu for Mobile -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="./homepage.html">Home</a>
+        <a href="./experience.html"><span>Experience</span></a>
+        <a href="./education.html">Education</a>
+        <a href="./certification.html">Certifications</a>
+        <a href="./projet.html">Projects</a>
+        <a href="./hobbies.html">Hobbies</a>
+    </div>
 
 <div class="tripbox">
     <div class="experience-section">
@@ -60,3 +72,18 @@
           </div>
       </div>
   </div>
+
+    <!-- JavaScript to Handle Sidebar Menu -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("blurOverlay").classList.add("active");
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("blurOverlay").classList.remove("active");
+        }
+    </script>
+</body>
+</html>

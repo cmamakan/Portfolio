@@ -1,58 +1,61 @@
-*{
+* {
 	padding: 0;
 	margin: 0;
 	font-family: 'Josefin Sans', sans-serif;
 	box-sizing: border-box;
 	color: rgb(0, 0, 0);
 }
-/* ajout d'un arrière plan*/
-.hero{
+
+/* Ajout d'un arrière-plan */
+.hero {
 	height: 100vh;
 	width: 100%;
-	background-image:  url(../IMAGES/home_walpaper.jpg);
+	background-image: url(../IMAGES/home_walpaper.jpg);
 	background-size: cover;
 	background-position: center;
 }
 
-/* texte en blanc et le span en rouge */
-.logo{
+/* Texte en blanc et le span en rouge */
+.logo {
 	color: white;
 	font-size: 35px;
 	letter-spacing: 1px;
 	cursor: pointer;
 }
-span{ 
-	color: #f9004d; /*tout les textes dans des span deviennent rouge*/
+
+span {
+	color: #f9004d; /* Tous les textes dans des span deviennent rouges */
 }
 
-/* ################# NAVIGATEUR ############*/
-/* on aligne les éléments du navigateur ensemble et on les espace*/
-nav{
+/* ################# NAVIGATEUR ############ */
+nav {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-top: 45px;
-	padding-left: 8%;
-	padding-right: 8%;
+	padding: 45px 8%;
 }
-/*on modifie à nouveau les éléménts du navigateur */
-nav ul li{
+
+/* Modifications des éléments du navigateur */
+nav ul li {
 	list-style-type: none;
 	display: inline-block;
-	padding: 10px  25px;
+	padding: 10px 25px;
 }
-nav ul li a{
+
+nav ul li a {
 	color: white;
 	text-decoration: none;
 	font-weight: bold;
 	text-transform: capitalize;
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
 	color: #f9004d;
 	transition: .4s;
 }
-.btn{
-	background-color:#f9004d;
+
+.btn {
+	background-color: #f9004d;
 	color: rgb(0, 0, 0);
 	text-decoration: none;
 	border: 2px solid transparent;
@@ -61,36 +64,43 @@ nav ul li a:hover{
 	border-radius: 30px;
 	transition: transform .4s; 
 }
-.btn:hover{
+
+.btn:hover {
 	transform: scale(1.2);
 }
-.content{
+
+.content {
 	position: absolute;
 	top: 50%;
-	left:8%;
+	left: 8%;
 	transform: translateY(-50%);
 }
-h1{
+
+h1 {
 	color: white;
-	margin: 20px 0px 20px;
+	margin: 20px 0;
 	font-size: 75px;
 }
-h3{
+
+h3 {
 	color: white;
 	font-size: 25px;
 	margin-bottom: 50px;
 }
-h4{
+
+h4 {
 	color: rgba(228, 228, 228, 0.8);
 	letter-spacing: 2px;
 	font-size: 20px;
 }
-.newslatter form{
+
+.newslatter form {
 	width: 380px;
 	max-width: 100%;
 	position: relative;
 }
-.newslatter form input:first-child{
+
+.newslatter form input:first-child {
 	display: inline-block;
 	width: 100%;
 	padding: 14px 130px 14px 15px;
@@ -98,33 +108,37 @@ h4{
 	outline: none;
 	border-radius: 30px;
 }
-.newslatter form input:last-child{
+
+.newslatter form input:last-child {
 	position: absolute;
 	display: inline-block;
 	outline: none;
 	border: none;
 	padding: 10px 30px;
 	border-radius: 30px;
-	background-color:#f9004d;
+	background-color: #f9004d;
 	color: white;
 	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
 	top: 6px;
 	right: 6px; 
 }
 
-.about{
+.about {
 	width: 100%;
-	padding: 100px 0px;
+	padding: 100px 0;
 	background-color: #191919;
 }
-.about img{
+
+.about img {
 	height: auto;
 	width: 430px;
 }
-.about-text{
+
+.about-text {
 	width: 550px;
 }
-.main{
+
+.main {
 	width: 1130px;
 	max-width: 95%;
 	margin: 0 auto;
@@ -132,28 +146,32 @@ h4{
 	align-items: center;
 	justify-content: space-around;
 }
-.about-text h2{
+
+.about-text h2 {
 	color: white;
 	font-size: 75px;
 	text-transform: capitalize;
 	margin-bottom: 20px;
 }
-.about-text h5{
+
+.about-text h5 {
 	color: white;
 	letter-spacing: 2px;
 	font-size: 22px;
 	margin-bottom: 25px;
 	text-transform: capitalize;
 }
-.about-text p{
+
+.about-text p {
 	color: rgba(228, 228, 228, 0.8);
 	letter-spacing: 1px;
 	line-height: 28px;
 	font-size: 18px;
 	margin-bottom: 45px;
 }
-button{
-	background-color:#f9004d;
+
+button {
+	background-color: #f9004d;
 	color: white;
 	text-decoration: none;
 	border: 2px solid transparent;
@@ -162,75 +180,183 @@ button{
 	border-radius: 30px;
 	transition: .4s; 
 }
-button:hover{
+
+button:hover {
 	background-color: transparent;
 	border: 2px solid #f9004d;
 	cursor: pointer;
 }
 
-/* suite */
+/* Suite */
 
 .experience-section {
-  background-color: rgb(7, 7, 7); /* Dark background for the entire section */
-  padding: 50px 0;
-  display: flex;
-  justify-content: center;
+	background-color: rgb(7, 7, 7); /* Fond sombre pour toute la section */
+	padding: 50px 0;
+	display: flex;
+	justify-content: center;
 }
 
 .experience-container {
-  max-width: 1200px;
-  background-color: #191919; /* Dark background for the container (adjust if needed) */
-  color: white; /* White text for content within the container */
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+	max-width: 1200px;
+	background-color: #191919; /* Fond sombre pour le conteneur (ajuster si nécessaire) */
+	color: white; /* Texte blanc pour le contenu à l'intérieur du conteneur */
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .company-logo {
-  width: 150px;
-  height: 150px;
-  margin-right: 30px;
-  border-radius: 50%;
-  object-fit: cover;
+	width: 150px;
+	height: 150px;
+	margin-right: 30px;
+	border-radius: 50%;
+	object-fit: cover;
 }
 
-
-.experience-details h2, .experience-details h3, .experience-details p {
-  color: white; /* Ensuring all text inside the details is white */
+.experience-details h2,
+.experience-details h3,
+.experience-details p {
+	color: white; /* Assurer que tout le texte à l'intérieur des détails est blanc */
 }
 
 .experience-details h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: #f9004d;
+	font-size: 28px;
+	margin-bottom: 10px;
+	color: #f9004d;
 }
 
 .experience-details h3 {
-  font-size: 22px;
-  margin-bottom: 5px;
-  font-weight: 500;
+	font-size: 22px;
+	margin-bottom: 5px;
+	font-weight: 500;
 }
 
 .experience-details p {
-  font-size: 18px;
-  line-height: 1.6;
+	font-size: 18px;
+	line-height: 1.6;
 }
 
 .location {
-  font-style: italic;
-  color: #f9004d; /* Keeping the location highlight color */
+	font-style: italic;
+	color: #f9004d; /* Couleur de surbrillance pour la localisation */
 }
 
 .technology-logos {
-    text-align: center; /* Center-align the logos image */
-    padding: 20px 0; /* Add padding above and below the logos for spacing */
+	text-align: center; /* Centrer les images de logos */
+	padding: 20px 0; /* Ajouter du padding au-dessus et en dessous des logos pour l'espacement */
 }
 
 .tech-logos {
-    width: 100%; /* Ensure the image is responsive and fits well */
-    max-width: 800px; /* Adjust max width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 auto; /* Center the image horizontally */
+	width: 100%; /* Assurer que l'image est responsive et s'adapte bien */
+	max-width: 800px; /* Ajuster la largeur maximale si nécessaire */
+	height: auto; /* Maintenir le ratio d'aspect */
+	margin: 0 auto; /* Centrer l'image horizontalement */
+}
+
+/* Styles pour le burger menu */
+.burger {
+	display: none; /* Masqué par défaut, affiché sur mobile */
+	cursor: pointer;
+	position: absolute; /* Positionner de manière absolue */
+	top: 15px; /* Distance du haut de la page */
+	right: 15px; /* Distance du bord droit */
+	z-index: 10; /* Assure que le menu burger soit au-dessus des autres éléments */
+}
+
+.burger-icon {
+	width: 30px; /* Ajuste la taille de l'icône */
+}
+
+/* Styles de la barre latérale */
+.sidebar {
+	height: 100%;
+	width: 250px; /* Largeur de la barre latérale */
+	position: fixed; /* Fixe la barre latérale à gauche */
+	z-index: 1;
+	top: 0;
+	left: -250px; /* Cache la barre latérale en dehors de l'écran */
+	background-color: #191919; /* Couleur de fond */
+	overflow-x: hidden; /* Empêche le défilement horizontal */
+	transition: 0.5s; /* Transition lisse */
+	padding-top: 60px; /* Espacement supérieur */
+}
+
+.sidebar a {
+	padding: 10px 15px; /* Espacement autour des liens */
+	text-decoration: none; /* Supprime le soulignement */
+	font-size: 20px; /* Taille de police */
+	color: white; /* Couleur du texte */
+	display: block; /* Affiche les liens en bloc */
+	transition: 0.3s; /* Transition pour les liens */
+}
+
+.sidebar a:hover {
+	background-color: #f9004d; /* Couleur au survol */
+}
+
+/* Styles pour le bouton de fermeture */
+.closebtn {
+	font-size: 36px;
+	margin-left: 15px; /* Espacement à gauche */
+}
+
+/* Media Queries pour les petits écrans (téléphones) */
+@media (max-width: 768px) {
+	nav ul {
+			display: none; /* Masquer les liens de navigation par défaut sur mobile */
+	}
+
+	.burger {
+			display: block; /* Affiche le burger menu sur mobile */
+			margin-top: 30px; /* Ajoutez un peu d'espace au-dessus pour aligner avec h2 */
+	}
+
+	.experience-section {
+			padding: 20px; /* Réduire le padding pour les écrans plus petits */
+	}
+
+	.experience-container {
+			flex-direction: column; /* Alignement vertical pour les petits écrans */
+			text-align: center; /* Centre le texte pour les petits écrans */
+	}
+
+	.company-logo {
+			margin: 0 auto 20px; /* Centre le logo et ajoute un espacement inférieur */
+	}
+
+	.about {
+			padding: 50px 20px; /* Réduit le padding pour les écrans plus petits */
+	}
+
+	h1 {
+			font-size: 50px; /* Réduire la taille du titre principal */
+	}
+
+	h3 {
+			font-size: 20px; /* Réduire la taille du sous-titre */
+	}
+
+	.btn {
+			padding: 10px 20px; /* Ajuster le padding du bouton */
+	}
+
+	/* Ajoute de l'espace entre le titre 'Portfolio' et le texte 'Hello, my name is' */
+	.content h1 {
+			margin-bottom: 20px; /* Ajustez la marge selon les besoins */
+	}
+
+	/* Espacement supplémentaire pour d'autres éléments */
+	.about-text h2 {
+			margin-bottom: 15px; /* Ajustez la marge si nécessaire */
+	}
+
+	.about-text p {
+			margin-bottom: 30px; /* Ajustez la marge si nécessaire */
+	}
+
+	.newslatter form {
+			width: 100%; /* S'assurer que le formulaire occupe toute la largeur */
+	}
 }
