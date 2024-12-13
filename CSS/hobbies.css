@@ -144,90 +144,6 @@ body{
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 820px){
-  .img-slider{
-    width: 600px;
-    height: 375px;
-  }
-
-  .img-slider .slide .info{
-    padding: 10px 25px;
-  }
-
-  .img-slider .slide .info h2{
-    font-size: 35px;
-  }
-
-  .img-slider .slide .info p{
-    width: 70%;
-    font-size: 15px;
-  }
-
-  .img-slider .navigation{
-    bottom: 25px;
-  }
-
-  .img-slider .navigation .btn{
-    width: 10px;
-    height: 10px;
-    margin: 8px;
-  }
-}
-
-@media (max-width: 620px){
-  .img-slider{
-    width: 400px;
-    height: 250px;
-  }
-
-  .img-slider .slide .info{
-    padding: 10px 20px;
-  }
-
-  .img-slider .slide .info h2{
-    font-size: 30px;
-  }
-
-  .img-slider .slide .info p{
-    width: 80%;
-    font-size: 13px;
-  }
-
-  .img-slider .navigation{
-    bottom: 15px;
-  }
-
-  .img-slider .navigation .btn{
-    width: 8px;
-    height: 8px;
-    margin: 6px;
-  }
-}
-
-@media (max-width: 420px){
-  .img-slider{
-    width: 320px;
-    height: 200px;
-  }
-
-  .img-slider .slide .info{
-    padding: 5px 10px;
-  }
-
-  .img-slider .slide .info h2{
-    font-size: 25px;
-  }
-
-  .img-slider .slide .info p{
-    width: 90%;
-    font-size: 11px;
-  }
-
-  .img-slider .navigation{
-    bottom: 10px;
-  }
-}
-
 /* ################# MINI SECTION ############*/
 
 .training_section{
@@ -323,7 +239,12 @@ img.food{
 	margin-left: 15px; /* Espacement à gauche */
 }
 
-/* Media Queries pour les petits écrans (téléphones) */
+
+
+/* MEDIAAAAAAAAAAAAAA QUERIES  */
+
+
+
 @media (max-width: 768px) {
 	nav ul {
 		display: none; /* Masquer les liens de navigation par défaut sur mobile */
@@ -334,16 +255,126 @@ img.food{
 		margin-top: 30px; /* Ajoutez un peu d'espace au-dessus pour aligner avec h2 */
 	}
 
-	.training-section {
-		padding: 20px; /* Réduire le padding pour les écrans plus petits */
-	}
+  /* BOX */ 
 
+  .hero { height: 60%;}
+
+  .tripbox {
+    height: 100%; /* Réduit la largeur du conteneur à 80% de son parent (ajustez selon vos besoins) */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    box-sizing: border-box; /* S'assure que le padding et la bordure ne modifient pas la largeur */
+    padding-bottom: 0;
+}
+
+.training_section {
+  height: 40%; /* Assurez-vous qu'il n'y ait pas de marge en haut de .training */
+}
+
+/* TITRESSSS */ 
+
+  .trips_title {
+    text-align: center;  /* Aligner le texte à gauche */
+    width: 100%;       /* Assurez-vous que l'élément prend toute la largeur disponible */
+    margin-bottom: 15px;   /* Enlève les marges éventuelles à gauche */
+    padding-left: 0;   /* Enlève le padding éventuel à gauche */
+}
+  .trips_title h1 {
+    text-align: center;  /* Aligne le texte à gauche */
+    margin-bottom: 15px;   /* Enlève les marges à gauche */
+    padding-left: 0;   /* Enlève le padding à gauche */
+}
+
+.training_title {
+  text-align: center;  /* Aligner le texte à gauche */
+  width: 100%;       /* Assurez-vous que l'élément prend toute la largeur disponible */
+  margin-bottom: 15px;     /* Enlève les marges éventuelles à gauche */
+  padding-left: 0;   /* Enlève le padding éventuel à gauche */
+}
+.training_title h1 {
+  text-align: center;  /* Aligne le texte à gauche */
+  margin-bottom: 15px;    /* Enlève les marges à gauche */
+  padding-left: 0;   /* Enlève le padding à gauche */
+}
+
+.cook_title {
+  text-align: center;  /* Aligner le texte à gauche */
+  width: 100%;       /* Assurez-vous que l'élément prend toute la largeur disponible */
+  margin-bottom: 15px;    /* Enlève les marges éventuelles à gauche */
+  padding-left: 0;   /* Enlève le padding éventuel à gauche */
+}
+.cook_title h1 {
+  text-align: center;  /* Aligne le texte à gauche */
+  margin-bottom: 15px;    /* Enlève les marges à gauche */
+  padding-left: 0;   /* Enlève le padding à gauche */
+}
+
+/* IMAGES */
+
+img.boxe {
+  width: 100%;  /* Prendre toute la largeur du conteneur parent */
+  height: auto; /* Maintenir le ratio de l'image */
+  margin: 0;  /* Retirer les marges */
+  padding-top: 0px;
+  padding-left: 0; /* Ajuster le padding si nécessaire */
+}
+  
+img.food {
+  width: 100%;  /* Prendre toute la largeur du conteneur parent */
+  height: auto; /* Maintenir le ratio de l'image */
+  margin: 0;  /* Retirer les marges */
+  padding-top: 0px;
+  padding-left: 0; /* Ajuster le padding si nécessaire */
+}
+
+@media (max-width: 420px){
+  .img-slider{
+    transform: scale(1.2); /* Agrandit l'image de 20% */
+    transform-origin: center center; /* Garde le centre de l'image comme point d'origine */
+    width: 100%; /* Garde la largeur de l'image à 100% de son conteneur */
+    height: auto; /* Conserve les proportions de l'image */
+  }
+
+  .img-slider .slide .info{
+    padding: 5px 10px;
+  }
+
+  .img-slider .slide .info h2{
+    font-size: 25px;
+  }
+
+  .img-slider .slide .info p{
+    width: 90%;
+    font-size: 11px;
+  }
+
+.img-slider .navigation {
+  position: absolute; /* Garder la navigation positionnée absolument par rapport à .img-slider */
+  top: 250px; /* Ajustez la distance du bas si nécessaire */
+  transform: translateX(-50%);
+  z-index: 2; /* Assurez-vous qu'elle soit au-dessus de l'image */
+}
+}
+
+/* AUTRES SECTIONS */
+  
+ 
 	.training-container {
 		flex-direction: column; /* Aligner le contenu en colonne pour une meilleure lisibilité */
 		padding: 15px; /* Ajuster le padding interne */
 		margin: 10px; /* Ajouter une marge pour espacer les conteneurs */
 	}
-
+  .training_section {
+    width: 80%; /* Réduit la largeur du conteneur à 80% de la largeur de l'écran */
+    max-width: 600px; /* Fixe une largeur maximale (par exemple 600px) */
+    margin: 10px auto; /* Centre le conteneur horizontalement et ajoute un espacement vertical */
+    text-align: center; /* Centre le contenu (titre et image) */
+  }
+  
+  .training_section img {
+    width: 100%; /* L'image occupe toute la largeur du conteneur */
+    max-width: 300px; /* Fixe une largeur maximale (par exemple 300px) */
+    height: auto; /* Maintient le ratio de l'image */
+  }
 	.company-logo {
 		margin: 0 auto 15px; /* Centrer l'image et ajouter une marge en bas */
 	}
